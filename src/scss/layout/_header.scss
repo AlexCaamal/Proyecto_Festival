@@ -1,0 +1,319 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.header {
+    background-color: v.$verde;
+    text-align: center;
+    display: flex;
+
+    @include m.tablet {
+        display: block;
+        
+        .mobile-menu {
+            padding-left: 47%;
+        }
+
+        .mostrar {
+            display: block;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            a {
+                font-size: 2.2rem;
+                padding: 0%;
+            }
+        }
+
+        .navegacion-principal {
+            flex-direction: row;
+        }
+
+        .contenido-header {
+            padding: 0rem;
+            height: 80px;
+
+            a {
+                color: #000;
+                font-size: 1rem;
+                padding: 1rem;
+            }
+           
+
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            .dark-mode {
+                width: 3rem;
+            }
+        }
+
+        &.fijo {
+            background-color: v.$rojo;
+            left: 0;
+            top: 0;
+            position: fixed;
+            width: 100%;
+            box-shadow: .1rem .2rem .3rem v.$gris;
+            a{
+                padding: 0%;
+            }
+        }
+    }
+
+    @include m.MaximoTablet {
+        display: block;
+        .mostrar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            a {
+                font-size: 2.2rem;
+                padding: 0%;
+            }
+        }
+
+        .contenido-header {
+            padding: 0rem;
+            height: 123px;
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            .dark-mode {
+                margin: 0;
+                width: 3rem;
+            }
+        }
+
+        .mobile-menu {
+            width: 100%;
+            padding-left: 45%;
+        }
+
+        &.fijo {
+            top: 0;
+            position: fixed;
+            width: 100%;
+            box-shadow: .1rem .2rem .3rem v.$gris;
+            a{
+                padding: 1%;
+            }
+        }
+    }
+
+    @include m.desktop {
+        display: flex;
+        .navegacion-principal {
+            display: flex;
+            a{
+                font-size: 3rem;
+            }
+        }
+        &.fijo {
+            background-color: v.$verde;
+            top: 0;
+            position: fixed;
+            max-width: 100%;
+            box-shadow: .1rem .2rem .3rem v.$gris;
+            a {
+                font-size: 3rem;
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 5rem;
+            }
+        }
+    }
+
+    @include m.telefono {
+        .contenido-header {
+            padding: 0rem;
+            height: 80px;
+
+            h1 {
+                font-size: 2.3rem;
+            }
+        }
+
+        &.fijo {
+            top: 0;
+            position: fixed;
+            max-width: 100%;
+            box-shadow: .1rem .2rem .3rem v.$gris;
+        }
+    }
+
+    @include m.Minitelefono {
+        .mobile-menu {
+            padding-left: 35%;
+        }
+
+        .contenido-header {
+            padding: 0rem;
+            height: 100px;
+
+            a {
+                font-size: 2.2rem;
+                padding: 0rem;
+            }
+
+            h1 {
+                font-size: 1.9rem;
+            }
+        }
+
+        &.fijo {
+            top: 0;
+            position: fixed;
+            max-width: 100%;
+            box-shadow: .1rem .2rem .3rem v.$gris;
+            a{
+                padding: 0%;
+            }
+        }
+    }
+
+    h1 {
+        font-size: 5rem;
+        color: v.$blanco;
+        text-align: center;
+        margin: 0rem;
+
+        @include m.tablet {
+            margin: 0;
+        }
+    }
+
+}
+
+.navegacion-principal {
+
+    @include m.tablet {
+        display: flex;
+        gap: 2rem;
+        margin: 0;
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: v.$blanco;
+        font-size: 2.4rem;
+        padding: 2rem;
+
+        @include m.tablet {
+           
+        }
+
+        &:hover {
+            color: v.$amarillo;
+            font-weight: bold;
+        }
+    }
+
+}
+
+.contenido-header {
+
+    @include m.tablet {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+.dark-mode {
+    width: 3rem;
+    
+}
+.dark-mode:hover {
+    cursor: pointer;
+}
+
+
+.derecha {
+    width: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0rem;
+    margin-bottom: 1rem;
+}
+
+.dark-modo {
+
+    background-color: #000;
+     .derecha img{
+        filter: invert(100%);
+    }
+
+    p {
+        color: v.$blanco;
+    }
+
+    h1,h3 {
+        color: v.$blanco;
+    }
+
+    h2 {
+        color: v.$rosa;
+    }
+
+    main {
+        background-color: #000;
+    }
+
+}
+
+.mobile-menu {
+    text-align: center;
+
+    img {
+        width: 4rem;
+    }
+
+    img:hover {
+        cursor: pointer;
+    }
+
+    @include m.desktop {
+        display: none;
+    }
+}
+
+@include m.MaximoTablet {
+    .navegacion-principal {
+        display: none;
+    }
+
+    .mobile-menu {
+        text-align: center;
+    }
+
+    .mobile-menu img {
+        width: 5rem;
+        /*PARA REDUCIR*/
+    }
+}
+
+@include m.tablet {
+    .navegacion-principal {
+        display: none;
+    }
+
+    .mobile-menu {
+        text-align: center;
+    }
+
+    .mobile-menu img {
+        width: 5rem;
+        /*PARA REDUCIR*/
+    }
+}
