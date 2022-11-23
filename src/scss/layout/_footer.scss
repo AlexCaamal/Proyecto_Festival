@@ -2,62 +2,105 @@
 @use 'base/variables' as v;
 
 
-
-.site-footer {
-    background-color: v.$rojo;
-    padding: 1rem;
-    height: 12rem;
+div.social-btn {
+    display: block;
+    width: 665px;
+    margin: 0 auto;
     text-align: center;
+}
+div.social-btn a {
+    text-decoration: none;
+}
+div.social-btn div {
+    width: 130px;
+    display: inline-block;
+    float: left;
+    height: 120px;
+    line-height: 120px;
+    color: #fff;
+    margin-right: 3px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-shadow:0px 0px 5px #000;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    margin-bottom: 50px;
+}
+div.social-btn a:last-child div {
+    margin-right: 0;
+}
+div.social-btn div:hover, div.social-btn div:active {
+    height: 135px;
+    padding-top: 15px;
+}
+i {
+    -moz-transition: all 0.4s ease-out;
+    -webkit-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+div.face span, div.twi span, div.in span, div.pin span, div.git span{
+    position: absolute;
+    left: 0;
+    font-family: v.$fuente_principal;
+    font-weight: 400;
+    width: 100px;
+    padding: 0px 15px;
+    opacity: 0;
+    -moz-transition: all 0.6s ease-in;
+    -o-transition: all 0.6s ease-in;
+    -webkit-transition: all 0.6s ease-in;
+    transition: all 0.6s ease-in;
+    line-height: 110px;
+    font-size: 20px;
+}
+div.social-btn div:hover i  {
+    opacity: 0;
+}
+div.social-btn div:hover span {
+    opacity: 1;
+}
+div.face {
+    background: #3A5795;
+    -moz-box-shadow: 0px 4px 0px #1e469d;
+    -webkit-box-shadow: 0px 4px 0px #1e469d;
+    box-shadow: 0px 4px 0px #3e6d8d;
+    position: relative;
+}
 
-    p {
-        margin: 0;
-        text-align: center;
-        color: v.$blanco;
-        font-weight: bold;
-        font-size: 1.2rem;
-    }
-
-    h1 {
-        margin: 0;
-        text-align: center;
-        color: v.$blanco;
-        font-weight: bold;
-        font-size: 3rem;
-    }
-
-    a {
-        margin: 5rem;
-    }
-    a:hover {
-        svg {
-            border-radius: 50%;
-            background-color: v.$blanco;
-            width: 70px;
-            height: 70px;
-        }
-    }
-
-    @include m.telefono{
-        height: 33rem;
-        .redes{
-            svg{
-            
-                width: 30px;
-                height: 30px;
-            }
-        }
-
-        height: 15rem;
-       
-        
-    }
-    @include m.Minitelefono{
-        .redes{
-            @include m.grid(1,.1rem);
-            display: block;
-        }
-        
-            height: 25rem;
-    }
+div.twi {
+    background: v.$rojo;
+    -moz-box-shadow: 0px 4px 0px #186ba4;
+    -webkit-box-shadow: 0px 4px 0px #186ba4;
+    box-shadow: 0px 4px 0px #2b95df;
+    position: relative;
+}
+div.in {
+    background: #0177B5;
+    -moz-box-shadow: 0px 4px 0px #035e8e;
+    -webkit-box-shadow: 0px 4px 0px #035e8e;
+    box-shadow: 0px 4px 0px #035e8e;
+    position: relative;
+}
+div.pin {
+    background: #D73532;
+    -webkit-box-shadow: 0px 4px 0px #b51c19;
+    -moz-box-shadow: 0px 4px 0px #b51c19;
+    box-shadow: 0px 4px 0px #b51c19;
+    position: relative;
+}
+div.git {
+    background: #BBBBBB;
+    -webkit-box-shadow: 0px 4px 0px #b51c19;
+    -moz-box-shadow: 0px 4px 0px #b51c19;
+    box-shadow: 0px 4px 0px #9a9a9a;
+    position: relative;
+}
+div.git i {
+    text-shadow: none;
 }
 
