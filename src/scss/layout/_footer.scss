@@ -65,7 +65,7 @@ div.social-btn div:hover span {
     opacity: 1;
 }
 div.face {
-    background: #3A5795;
+    background: v.$rojo;
     -moz-box-shadow: 0px 4px 0px #1e469d;
     -webkit-box-shadow: 0px 4px 0px #1e469d;
     box-shadow: 0px 4px 0px #3e6d8d;
@@ -73,28 +73,28 @@ div.face {
 }
 
 div.twi {
-    background: v.$rojo;
+    background: v.$negro;
     -moz-box-shadow: 0px 4px 0px #186ba4;
     -webkit-box-shadow: 0px 4px 0px #186ba4;
     box-shadow: 0px 4px 0px #2b95df;
     position: relative;
 }
 div.in {
-    background: #0177B5;
+    background: v.$verde;
     -moz-box-shadow: 0px 4px 0px #035e8e;
     -webkit-box-shadow: 0px 4px 0px #035e8e;
     box-shadow: 0px 4px 0px #035e8e;
     position: relative;
 }
 div.pin {
-    background: #D73532;
+    background: v.$negro;
     -webkit-box-shadow: 0px 4px 0px #b51c19;
     -moz-box-shadow: 0px 4px 0px #b51c19;
     box-shadow: 0px 4px 0px #b51c19;
     position: relative;
 }
 div.git {
-    background: #BBBBBB;
+    background: v.$azul;
     -webkit-box-shadow: 0px 4px 0px #b51c19;
     -moz-box-shadow: 0px 4px 0px #b51c19;
     box-shadow: 0px 4px 0px #9a9a9a;
